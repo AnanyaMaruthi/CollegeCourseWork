@@ -2,7 +2,11 @@
 
 def fibonacci(number):
     series = [0 for _ in range(number)]
-    series[1] = 1
+    try:
+        series[0] = 0
+        series[1] = 1
+    except:
+        return series
     for i in range(2, number + 1):
         series[i] = series[i - 1] + series[i - 2]
     return series
