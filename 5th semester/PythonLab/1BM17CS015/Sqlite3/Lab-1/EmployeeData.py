@@ -1,3 +1,11 @@
+# Create a database program to demonstrate Employee information for the following operations:
+# a) To insert new Employee information
+# b) To display Employee information
+# c) To query and retrieve the data of a specific Employee
+# d) Update the Employee information
+# e) Delete a particular Employee
+# Note: Assume the attributes(minimum four) during the creation of the table.
+
 import sqlite3 as sql
 
 database = sql.connect("./EmployeeData.db")
