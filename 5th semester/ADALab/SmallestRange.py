@@ -1,3 +1,4 @@
+import sys
 
 def leftChild(n):
     return 2 * n + 1
@@ -27,9 +28,9 @@ def minHeapify(heap):
 
 def findMinRange(lists, listCount):
     heap = []
-    minRange = 100
-    max = 0
-    min = 100
+    minRange = sys.maxsize
+    minGlobal = sys.maxsize 
+    maxGlobal = -1
     # Initialization
     for i in range(listCount):
         temp = {}
@@ -37,20 +38,23 @@ def findMinRange(lists, listCount):
         temp["listNumber"] = i
         temp["element"] = lists[i][0]
         heap.append(temp)
-        if temp["element"] > max:
-            max = temp["element"]
+        if temp["element"] > maxGlobal:
+            maxGlobal = temp["element"]
     
     # print(heap)
     minHeapify(heap)
-    min = heap[0]["element"]
-    minRange = max - min 
+    minGlobal = heap[0]["element"]
+    minRange = maxGlobal - minGlobal 
     # print(heap)
 
+    min = minGlobal
+    max = maxGlobal
     while True:
         currentList = heap[0]["listNumber"]
         currentIndex = heap[0]["index"] + 1
         if currentIndex == len(lists[currentList]):
-            return min, max, minRange
+            return minGlobal, maxGlobal, minRange
+
         element = lists[currentList][currentIndex]
         heap[0]["element"] = element
         heap[0]["index"] += 1
@@ -61,10 +65,15 @@ def findMinRange(lists, listCount):
         currentRange = max - min
         if currentRange < minRange:
             minRange = currentRange
+            maxGlobal = max
+            minGlobal = min
 
 l1 = [4, 10, 15, 24, 26]
 l2 = [0, 9, 12, 20]
 l3 = [5, 18, 22, 30]
+l1 = [4, 7, 9, 12, 15]
+l2 = [0, 8, 10, 14, 20]
+l3 = [6, 12, 16, 30, 50]
 lists = [l1, l2, l3]
 print(findMinRange(lists, len(lists)))
 
