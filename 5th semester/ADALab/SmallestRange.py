@@ -8,18 +8,17 @@ def rightChild(n):
 
 def minHeapify(heap):
     n = len(heap)
-    for i in range(n // 2):
-        isHeap = False
-        indexToSwap = i
 
-        while isHeap == False and leftChild(i) < n:
+    for i in range(n // 2):
+        indexToSwap = i
+        while leftChild(i) < n:
             if heap[leftChild(i)]["element"] < heap[indexToSwap]["element"]:
                 indexToSwap = leftChild(i)
             if rightChild(i) < n:
                 if heap[rightChild(i)]["element"] < heap[indexToSwap]["element"]:
                     indexToSwap = rightChild(i)
             if indexToSwap == i:
-                isHeap = True
+                break
             else:
                 # Swap
                 heap[i], heap[indexToSwap] = heap[indexToSwap], heap[i]
@@ -68,9 +67,9 @@ def findMinRange(lists, listCount):
             maxGlobal = max
             minGlobal = min
 
-l1 = [4, 10, 15, 24, 26]
-l2 = [0, 9, 12, 20]
-l3 = [5, 18, 22, 30]
+# l1 = [4, 10, 15, 24, 26]
+# l2 = [0, 9, 12, 20]
+# l3 = [5, 18, 22, 30]
 l1 = [4, 7, 9, 12, 15]
 l2 = [0, 8, 10, 14, 20]
 l3 = [6, 12, 16, 30, 50]
