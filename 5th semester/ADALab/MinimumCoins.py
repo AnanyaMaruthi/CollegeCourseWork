@@ -1,15 +1,3 @@
-def getMinimumCoins(amount, denominations):
-    coinsUsed = [0 for _ in range(len(denominations))]
-    n = len(denominations)
-    for i in range(n - 1, -1, -1):
-        number = amount // denominations[i]
-        amount = amount % denominations[i]
-        coinsUsed[i] = number
-    print("The coins used are:")
-    for i in range(n):
-        print(denominations[i], "->", coinsUsed[i])
-    return coinsUsed
-
 def getMinCoinsDP(amount, denominations, index, table):
     # print(amount, index)
     if amount == 0:
