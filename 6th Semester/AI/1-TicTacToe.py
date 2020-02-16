@@ -50,27 +50,19 @@ def checkWin(row, col):
     winningScore = {player1 : 1, player2: -1}
     # Check row 
     if gameBoard[row][0] == gameBoard[row][1] == gameBoard[row][2]:
-        print("Row")
         return True, winningScore[gameBoard[row][col]]
     # Check column 
     if gameBoard[0][col] == gameBoard[1][col] == gameBoard[2][col]:
-        print("Col")
         return True, winningScore[gameBoard[row][col]]
-
     # Check major diagonal
     if row == col and gameBoard[0][0] == gameBoard[1][1] == gameBoard[2][2]:
-        print("Major")
         return True, winningScore[gameBoard[row][col]]
-
     # Check minor diagonal 
     if (abs(row - col) == 2 or row == col == 1) and gameBoard[0][2] == gameBoard[1][1] == gameBoard[2][0]:
-        print("minor")
         return True, winningScore[gameBoard[row][col]]
-
     # Tie 
     if movesLeft == 0:
         return True, 0
-
     # Game in progress 
     return False, 0
 
@@ -84,7 +76,6 @@ def checkProbableWin(player):
         print("Major diag mmight win")
         for i in range(3):
             if gameBoard[i][i] == "":
-                print(i, i)
                 return (True, (i, i))
 
     # Check for a win in minor diagonal 
@@ -104,7 +95,6 @@ def checkProbableWin(player):
             print("Row might win", row)
             for col in range(3):
                 if gameBoard[row][col] == "":
-                    print(row, col)
                     return (True, (row, col))
 
     # Check for a probable win in columns 
@@ -113,7 +103,6 @@ def checkProbableWin(player):
             print("Col might win", col)
             for row in range(3):
                 if gameBoard[row][col] == "":
-                    print(row, col)
                     return (True, (row, col))
 
     print("No probable win")
