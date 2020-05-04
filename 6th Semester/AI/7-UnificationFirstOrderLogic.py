@@ -13,8 +13,6 @@ def getAttributes(expression):
     # expression = g(x),y
     # split at commma only when not surrounded by ()
     expression = re.split("(?<!\(.),(?!.\))", expression)
-    print("exp")
-    print(expression)
     return expression
 
 
