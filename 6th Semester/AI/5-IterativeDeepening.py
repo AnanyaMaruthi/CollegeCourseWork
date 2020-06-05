@@ -70,8 +70,8 @@ def printSolutionRoute(route):
         printBoard(state)
 
 def main():
-    initialState = [[1, 5, 2], [4, 8, 0], [7, 6, 3]]
-    goalState = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
+    initialState = [[3, 1, 4], [8, 2, 6], [0, 5, 7]]
+    goalState = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
     print("Initial state")
     printBoard(initialState)
 

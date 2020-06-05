@@ -1,9 +1,6 @@
 # Implement unification in first order logic
-
 # Use small letters for variables and capital letters for constants in the expression
-
 import re
-
 
 def getAttributes(expression):
     # expression - Like(g(x), y) ; Attributes - g(x), y
@@ -15,19 +12,15 @@ def getAttributes(expression):
     expression = re.split("(?<!\(.),(?!.\))", expression)
     return expression
 
-
 def getInitialPredicate(expression):
     # expression - Like(x, y) ; Predicate - Like
     return expression.split("(")[0]
 
-
 def isConstant(char):
     return char.isupper() and len(char) == 1
 
-
 def isVariable(char):
     return char.islower() and len(char) == 1
-
 
 def replaceAttributes(exp, old, new):
     attributes = getAttributes(exp)
@@ -37,13 +30,11 @@ def replaceAttributes(exp, old, new):
     predicate = getInitialPredicate(exp)
     return predicate + "(" + ",".join(attributes) + ")"
 
-
 def apply(exp, substitutions):
     for substitution in substitutions:
         new, old = substitution  # substitution is a tuple of 2 values (new, old)
         exp = replaceAttributes(exp, old, new)
     return exp
-
 
 def checkOccurs(var, exp):
     # checks if variable occurs in expression
@@ -51,18 +42,15 @@ def checkOccurs(var, exp):
         return False
     return True
 
-
 def getFirstPart(expression):
     attributes = getAttributes(expression)
     return attributes[0]
-
 
 def getRemainingPart(expression):
     predicate = getInitialPredicate(expression)
     attributes = getAttributes(expression)
     newExpression = predicate + "(" + ",".join(attributes[1:]) + ")"
     return newExpression
-
 
 def unify(exp1, exp2):
     if exp1 == exp2:

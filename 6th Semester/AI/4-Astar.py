@@ -1,3 +1,5 @@
+import threading
+
 class Node:
     def __init__(self, parent, board, cost):
         super().__init__()
@@ -100,11 +102,11 @@ class Node:
         return (goal_row, goal_column)
 
     def get_goal_index(self, value):
-        return "123456780".index(value)
+        return "012345678".index(value)
 
 
 def AStar():
-    start = Node(None, "123046758", 0)
+    start = Node(None, "314826057", 0)
     open_list = {0: [start]}
     closed_list = []
 
@@ -153,5 +155,11 @@ def get_closest_node(open_list, closed_list):
     return possible_move
 
 
+def timeElapsed():
+    print("Time overr. We take over here.")
+
 if __name__ == "__main__":
+    timer = threading.Timer(10.0, timeElapsed)
+    timer.start()
+
     AStar()

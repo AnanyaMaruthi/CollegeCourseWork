@@ -1,11 +1,11 @@
 class Node:
     def __init__(self, current, previous=[]):
-        super().__init__()
+        # super().__init__()
         self.current = current
         self.previous = previous
 
-    def __str__(self):
-        return "current: " + self.current + "\nprevious: " + ", ".join(self.previous)
+    # def __str__(self):
+    #     return "current: " + self.current + "\nprevious: " + ", ".join(self.previous)
 
 
 possible_moves = {
@@ -47,9 +47,12 @@ def get_move_results(sequence):
 if __name__ == "__main__":
     # number = input("Enter a 9 digit number showing the orientation of the game (row wise):\n")
     sequence = "123046758"
+    # sequence = "123456780"
+
 
     if check_result(sequence):
         print("You entered the solution.")
+        exit()
 
     nodes = [Node(sequence)]
 
@@ -71,6 +74,7 @@ if __name__ == "__main__":
                 if check_result(move):
                     print("Number of moves - " + str(num_moves))
                     print("Number of traversed nodes - " + str(num_nodes))
+                    print(previous)
                     exit()
 
                 if move not in node.previous:

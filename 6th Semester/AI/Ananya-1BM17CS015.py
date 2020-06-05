@@ -1,6 +1,5 @@
 # Create a knowledge base using prepositional logic and show whether the given query entails the knowledge base or not .
-
-# For 2 variables 
+ 
 truthCombinations = [
     { "p" : False, "q" : False },
     { "p" : False, "q" : True },
@@ -46,7 +45,7 @@ def evaluate(expression, truthValue):
     for character in expression:
         if character == "~":
             operand = stack.pop()
-            stack.append(not truthValue[operand])
+            stack.append(not operand)
         
         elif character == "^":
             operand1 = stack.pop()
@@ -65,7 +64,7 @@ def evaluate(expression, truthValue):
 
 def getEntailment(knowledgeBase, query):
     print("Truth table: ")
-    print("P \t Q \t Knowledge Base  Query")
+    print("P \t Q \t KB \t  Query")
     isEntailed = True
     for truthValue in truthCombinations:
         knowledgeBaseTruth = evaluate(getPostfix(knowledgeBase), truthValue)
@@ -85,7 +84,3 @@ def main():
     getEntailment(knowledgeBase, query)
 
 main()
-
-# Sample input
-# Knowledge Base : pvq^(p^q)
-# Query : p^q^(pvq)

@@ -123,23 +123,23 @@ def getBestMove(prevRow, prevCol):
     if movesLeft == 8:
         return (0, 0)
     # Strategically return a corner
-    if movesLeft == 7:
-        # Corner was not occupied by the opponent 
-        if abs(prevRow - prevCol) == 1:
-            if prevCol == 2:
-                return (2, 0)
-            if prevCol == 0:
-                return (2, 2)
-            if prevRow == 2:
-                return (0, 0)
-            if prevRow == 0:
-                return (2, 2)
-        else:
-            # Occupy a corner in the same column
-            if prevRow == 0:
-                return (prevRow + 2, prevCol)
-            elif prevRow == 2:
-                return (0, prevCol)
+    # if movesLeft == 7:
+    #     # Corner was not occupied by the opponent 
+    #     if abs(prevRow - prevCol) == 1:
+    #         if prevCol == 2:
+    #             return (2, 0)
+    #         if prevCol == 0:
+    #             return (2, 2)
+    #         if prevRow == 2:
+    #             return (0, 0)
+    #         if prevRow == 0:
+    #             return (2, 2)
+    #     else:
+    #         # Occupy a corner in the same column
+    #         if prevRow == 0:
+    #             return (prevRow + 2, prevCol)
+    #         elif prevRow == 2:
+    #             return (0, prevCol)
 
     # Check if you have a probable win (Player 1) 
     probableWin, cell = checkProbableWin(player1)
