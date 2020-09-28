@@ -1,4 +1,4 @@
-## Mongo DB
+## Mongo DB Lab
 
 ### Comapny Database
 
