@@ -38,6 +38,6 @@
 
    ![](Images/ViewImport.png)
 
-<!-- ## Write Up -->
+## Write Up
 
-<!-- ![Write up Screenshot](Images/WriteUp.jpeg) -->
+![Write up Screenshot](Images/Writeup.jpeg)
