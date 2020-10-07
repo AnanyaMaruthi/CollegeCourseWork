@@ -14,3 +14,5 @@ carder_bee <- c(8,27,6,32,23)
 honey_bee <- c(12,13,16,9,10)
 data_frame <- data.frame(buff_tail, garden_bee, red_tail, carder_bee, honey_bee)
 row.names(data_frame) <- c("Thistle", "Vipers", "Golden Rain", "Yell", "PlantX")
+data_frame
+str(data_frame)
