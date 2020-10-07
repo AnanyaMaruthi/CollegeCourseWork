@@ -17,3 +17,11 @@
 ## Write Up
 
 ![Write up Screenshot](Images/Writeup.jpeg)
+
+## Plots
+
+#### Import a CSV file, summarize the file and plot any two numeric columns of the file.
+
+![Screenshot](Images/PlotCode.png)
+
+![Screenshot](Images/Plot.png)
