@@ -1,0 +1,5 @@
+data <- read.delim(file = file.choose(), header = TRUE, sep = ",")
+summary(data)
+machine <- c(100:199)
+data <- cbind(data, machine)
+write.table(data,file = "/home/ananya/My Stuff/college/CollegeCourseWork/7th semester/DataScienceWithR/Lab3/ExportedFile.txt",sep='\t',row.names=FALSE)

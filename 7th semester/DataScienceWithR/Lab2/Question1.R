@@ -1,0 +1,5 @@
+data <- read.csv('/home/ananya/My Stuff/college/CollegeCourseWork/7th semester/DataScienceWithR/Lab2/Perfume_Volumes_2_Sample.csv')
+summary(data)
+ncol(data)
+nrow(data)
+plot(x=data$Machine.1,y=data$Machine.2)
