@@ -22,10 +22,10 @@ The program can be found [here (Question2.R)](Question2.R)
 
 #### Output
 
-Box Plot
+**Box Plot**
 
 ![Screenshot](Images/Q2-BoxPlot.png)
 
-Scatter Plot
+**Scatter Plot**
 
 ![Screenshot](Images/Q2-ScatterPlot.png)
