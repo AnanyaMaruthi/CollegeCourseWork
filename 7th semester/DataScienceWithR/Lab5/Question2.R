@@ -1,7 +1,7 @@
 # install.packages("ggplot2")
 library("ggplot2")
 
-x <- rnorm(100)
+x <- rnorm(100, mean=0, sd=1)
 y <- x + rnorm(100, mean=0, sd=1)
 data <- as.data.frame(cbind(x, y))
 ggplot() + geom_point(data=data, aes(x=x, y=y), size=3, col="blue")
