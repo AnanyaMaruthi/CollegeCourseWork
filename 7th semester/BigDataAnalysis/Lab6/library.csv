@@ -1,0 +1,4 @@
+id,studentname,bookname,bookid,dateofissue,countervalue
+111,Ananya,book1,10,2020-10-06,1
+112,Girl,book1,10,2020-10-06,2
+112,Girl,book2,11,2020-10-06,3
