@@ -12,3 +12,7 @@ pred <- fitted(lr)
 pred
 plot(df$temperature, df$yield, col="red")
 abline(lr, col="blue")
+
+# residuals
+residuals(lr)
+plot(lr, which=1)
