@@ -2,8 +2,9 @@
 
 #### Configure stuff properly:
 
-> 1. mapred-site.xml [use this](https://stackoverflow.com/questions/50719585/unable-to-run-mapreduce-wordcount)
-> 2. Others [use this](https://www.edureka.co/blog/install-hadoop-single-node-hadoop-cluster)
+1. mapred-site.xml [use this](https://stackoverflow.com/questions/50719585/unable-to-run-mapreduce-wordcount)
+
+2. Others [use this](https://www.edureka.co/blog/install-hadoop-single-node-hadoop-cluster)
 
 #### Executing stuff:
 
