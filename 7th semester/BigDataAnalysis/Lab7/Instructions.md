@@ -13,7 +13,7 @@
 
 3. Create a Manifest file [manifest.mf](manifest.mf)
 
-4. Create a jar file `jar -cvmf WordCount.jar manifest.mf classes.` [Refer this](https://docs.oracle.com/javase/tutorial/deployment/jar/build.html)
+4. Create a jar file `jar -cvmf manifest.mf WordCount.jar classes.` [Refer this](https://docs.oracle.com/javase/tutorial/deployment/jar/build.html)
 
 5. Verify if jar file is built correctly `java -jar WordCount.jar` (P.S. You'll get hadoop errors tho)
 
